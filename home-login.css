@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+
+:root{
+    --light-grey: #f5f5f5;
+    --grey: #a2a2a2;
+    --blue: #2a7ae4;
+    --white: #fff;   
+    --light-blue: #eaf2fd; 
+    --black: #464646;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+
+header .logo-search{
+    padding: 10px;
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+}
+
+header .logo-search .input-search{
+    margin-left: 40px;
+    padding: 5px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    background: var(--light-grey);
+    color: var(--grey);
+    border-color: transparent;
+}
+header .logo-search .icon{
+    padding: 5.5px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: var(--light-grey);
+    color: var(--grey);
+    border-color: transparent;
+}
+header .login{
+    color: var(--white);
+    padding: 15px;
+    border: 1px solid var(--blue);
+    display: flex;
+    align-items: center;
+}
+
+header .login .btn-login{
+    margin-left: 30px;
+    margin-right: 30px;
+    text-decoration: none;
+    color:  var(--blue);
+}
+.home-login{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.login{
+    margin-top: 5%;
+    max-width: 600px;
+}
+
+.login-user h3{
+   color: var(--black);
+   font-weight: bold;
+    margin-left: 20%;
+    margin-bottom: 5%;
+}
+
+.login-user .input-box{
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.login-user .input-box input,
+.login-user .input-box textarea{
+    color: var(--black);
+    width: 70%;
+    padding: 10px;
+    font-size: 1em;
+    font-weight: 200;
+    outline: none;
+    border: 1px solid transparent;
+    box-shadow: 0 2px 2px -2px var(--grey);
+    resize: none;
+}
+.login-user .input-box .send-btn{
+    color: var(--white);
+    background: var(--blue);
+    font-size: 1em;
+    font-weight: 800px;
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    transition: 0.5s ease;
+}
+.sobre-nosotros{
+    padding: 5rem 0;
+    height: 100%;
+    width: 100%;
+}
+
+.content-about-us{
+    display: flex;
+    justify-content: space-between;
+    background: var(--light-blue);
+}
+.content-about-us h3{
+    margin-bottom: 10px;
+}
+.logo-about-us{
+    margin-left: 7%;
+    margin-top: 5%;
+}
+.list-about-us{
+    margin-top: 5%;
+}
+.list-item li{
+    list-style: none;
+    line-height: 2;
+    font-size: 1.2rem;
+}
+.list-item a{
+    color: var(--black);
+    text-decoration: none;
+}
+.contact-about-us{
+    margin-top: 5%;
+    max-width: 600px;
+}
+
+.contact-about-us h3{
+   color: var(--black);
+   font-weight: bold;
+}
+
+.contact-about-us .input-box{
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contact-about-us .input-box input,
+.contact-about-us .input-box textarea{
+    color: var(--black);
+    width: 70%;
+    padding: 10px;
+    font-size: 1em;
+    font-weight: 200;
+    outline: none;
+    border: 1px solid transparent;
+    box-shadow: 0 2px 2px -2px var(--grey);
+    resize: none;
+}
+.contact-about-us .input-box .send-btn{
+    color: var(--white);
+    background: var(--blue);
+    font-size: 1em;
+    font-weight: 800px;
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    transition: 0.5s ease;
+}
+
+.content-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--black);
+}
+
+@media only screen and (max-width: 600px) {
+    header{
+        padding: 0;
+        justify-content: flex-start;
+    }
+    header .logo-search{
+        padding: 0;
+        margin: 10px;
+    }
+    .logo-search img{
+        height: 30px;
+        width: 100px;
+    }
+    header .logo-search .input-search{
+        width: 30px;
+        width: 100px;
+        margin-left: 30px;
+    }
+    .home-login{
+        margin-left: 20%;
+    }  
+    .logo-about-us{
+        margin-left: 20%;
+    } 
+    .content-about-us{
+        display: block;
+    }
+    .list-about-us{
+        margin: 20%;
+    }
+    .contact-about-us{
+        margin: 20%;
+    }
+}
