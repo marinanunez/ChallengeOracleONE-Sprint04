@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+
+:root {
+    --light-grey: #f5f5f5;
+    --grey: #a2a2a2;
+    --blue: #2a7ae4;
+    --white: #fff;
+    --light-blue: #eaf2fd;
+    --black: #464646;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+}
+
+.app {
+    background: var(--white);
+    display: grid;
+    grid-template-areas:
+        "productos"
+        "quines-somos"
+        "pie";
+    grid-template-columns: auto;
+    grid-template-rows: 100px auto auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+
+header .logo-search {
+    padding: 10px;
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+}
+
+header .logo-search .input-search {
+    margin-left: 40px;
+    padding: 5px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    background: var(--light-grey);
+    color: var(--grey);
+    border-color: transparent;
+}
+
+header .logo-search .icon {
+    padding: 5.5px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: var(--light-grey);
+    color: var(--grey);
+    border-color: transparent;
+}
+
+button {
+    margin-top: 20px;
+    margin-right: 10%;
+
+}
+
+.productos {
+    display: grid;
+    grid-template-areas:
+        "contenido"
+        "sobre-nosotros";
+    grid-template-columns: auto;
+    grid-template-rows: 70px 100vh auto;
+    background: var(--back-blue);
+}
+
+.products {
+    padding: 2rem 0;
+}
+
+.products-card {
+    background: var(--white);
+    display: grid;
+    grid-template-areas:
+        "card-imagen"
+        "card-base";
+    grid-template-columns: 100%;
+    width: calc(20%-1rem);
+    grid-template-rows: 170px auto;
+    margin-right: .75rem;
+}
+
+.products-card-img {
+    grid-area: "card-imagen";
+    height: 100%;
+    width: 100%;
+}
+
+.products-card-base {
+    display: grid;
+    grid-area: "card-base";
+    grid-row-gap: .5rem;
+    grid-template-rows: 20px auto;
+    padding: .1rem;
+}
+
+.products-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 0rem;
+    margin-left: 7.2%;
+}
+
+.products-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+
+.products-title {
+    font-size: 2rem;
+    color: var(--black);
+    margin-left: 100px;
+}
+
+.products-card-title {
+    font-weight: normal;
+}
+
+.product-card-cost {
+    font-weight: bold;
+}
+
+.products-info .btn {
+    color: var(--white);
+    background: var(--blue);
+    font-size: .8em;
+    font-weight: 800px;
+    display: inline-block;
+    margin-right: 10.5%;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 1px;
+    transition: 0.5s ease;
+}
+
+.sobre-nosotros {
+    grid-area: "sobre-nosotros";
+    padding: 5rem 0;
+    height: 100%;
+    width: 100%;
+}
+
+.content-about-us {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-about-us h3 {
+    margin-bottom: 10px;
+}
+
+.logo-about-us {
+    margin-left: 7%;
+    margin-top: 5%;
+}
+
+.list-about-us {
+    margin-top: 5%;
+}
+
+.list-item li {
+    list-style: none;
+    line-height: 2;
+    font-size: 1.2rem;
+}
+
+.list-item a {
+    color: var(--black);
+    text-decoration: none;
+}
+
+.contact-about-us {
+    margin-top: 5%;
+    max-width: 600px;
+}
+
+.contact-about-us h3 {
+    color: var(--black);
+    font-weight: bold;
+}
+
+.contact-about-us .input-box {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contact-about-us .input-box input,
+.contact-about-us .input-box textarea {
+    color: var(--black);
+    width: 70%;
+    padding: 10px;
+    font-size: 1em;
+    font-weight: 200;
+    outline: none;
+    border: 1px solid transparent;
+    box-shadow: 0 2px 2px -2px var(--grey);
+    resize: none;
+}
+
+.contact-about-us .input-box .send-btn {
+    color: var(--white);
+    background: var(--blue);
+    font-size: 1em;
+    font-weight: 800px;
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    transition: 0.5s ease;
+}
+
+.footer {
+    display: grid;
+    grid-area: pie;
+    grid-template-rows: 50px 50vh;
+}
+
+.content-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20%;
+    padding: 30px;
+    color: var(--black);
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        padding: 0;
+        justify-content: flex-start;
+    }
+
+    header .logo-search {
+        padding: 0;
+        margin: 5px;
+    }
+
+    .logo-search img {
+        height: 30px;
+        width: 100px;
+    }
+
+    header .logo-search .input-search {
+        width: 30px;
+        width: 100px;
+        margin: 0;
+    }
+
+    .products {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .products-info {
+        align-items: baseline;
+    }
+
+    .products-title {
+        margin: 30px;
+        font-size: 1.4rem;
+    }
+
+    .content-about-us {
+        display: block;
+    }
+
+    .list-about-us {
+        margin: 30px;
+    }
+
+    .contact-about-us {
+        margin: 30px;
+    }
+
+    .content-footer {
+        margin-top: 150%;
+    }
+}
